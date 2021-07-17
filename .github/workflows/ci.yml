@@ -1,0 +1,43 @@
+name: Deno CI
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        deno-version: [1.6]
+
+    steps:
+    - name: Deno Build ${{ matrix.deno-version }}
+    - uses: actions/checkout@v2
+      uses: denolib/deno-action@0.20.0
+      with:
+        deno-version: ${{ matrix.deno-version }}
+    - run: deno run build --if-present
+
+  lint:
+    - name: lint.js
+      run: deno run --unstable --allow-write --allow-read --allow-run ./tools/lint.js
+
+  formatting:
+    - name: test_format.js
+      run: deno run --unstable --allow-write --allow-read --allow-run ./tools/format.js --chec
+
+  test:
+    strategy:
+      matrix:
+        deno-version: [1.6.x]
+
+    steps:
+    - name: Deno Test ${{ matrix.deno-version }}
+    - uses: denolib/deno-action@0.20.0
+      with:
+        deno-version: ${{ matrix.deno-version }}
+    - run: deno test
