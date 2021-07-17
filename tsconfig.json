@@ -1,7 +1,7 @@
 {
   "// comment lines": [
-    "The following options are default configuration",
-    "If use it that customized, it can use with -c option",
+    "The following options are default configurations",
+    "If use it that customized, it can hit deno command with -c option",
     "ex. deno run -c tsconfig.json aaa.ts"
   ],
   "compilerOptions": {
