@@ -5,12 +5,15 @@
   "deno.importMap": "import_map.json",
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno",
-    "editor.commentOfTheAboveSetting": "Open the VS Code command palette with Ctrl+Shift+P, and run the Deno: Initialize Workspace Configuration command."
+    "// comment line of the above setting": [
+      "Open the VS Code command palette with Ctrl+Shift+P, and run the Deno: Initialize Workspace Configuration command."
+    ],
   },
   "deno.import_intellisense_origins": {
     "https://deno.land": true
   },
   "cSpell.words": [
-    "denoland"
+    "denoland",
+    "codecov"
   ]
 }

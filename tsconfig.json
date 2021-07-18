@@ -1,9 +1,10 @@
 {
-  "// comment lines": [
+  "// comment lines": {
+    "comment": [
     "The following options are default configurations",
     "If use it that customized, it can hit deno command with -c option",
-    "ex. deno run -c tsconfig.json aaa.ts"
-  ],
+    "ex. deno run -c tsconfig.json aaa.ts"]
+  },
   "compilerOptions": {
     "allowJs": false,
     "allowUmdGlobalAccess": false,
