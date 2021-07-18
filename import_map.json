@@ -1,0 +1,12 @@
+{
+  "** // comment lines **": [
+    "The followings code are sample"
+  ],
+  "imports": {
+    "/": "./",
+    "./": "./",
+    "fmt/":    "https://deno.land/std@0.101.0/fmt/",
+    "io/":     "https://deno.land/std@0.101.0/io/",
+    "testing": "https://deno.land/std@0.101.0/testing/"
+  }
+}
